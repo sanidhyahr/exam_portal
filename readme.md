@@ -115,52 +115,50 @@ This document provides the Low-Level Design (LLD) for an Online Exam Portal aime
 │       ├── java/
 │       │   └── com/
 │       │       └── examportal/
-│       │           ├── controller/
+│       │           ├── controller/          # REST controllers for handling HTTP requests
 │       │           │   ├── AdminController.java
 │       │           │   ├── UserController.java
 │       │           │   ├── ExamController.java
 │       │           │   └── ReportController.java
 │       │           │
-│       │           ├── service/
+│       │           ├── service/             # Service interfaces for business logic
 │       │           │   ├── AdminService.java
 │       │           │   ├── UserService.java
 │       │           │   ├── ExamService.java
 │       │           │   └── ReportService.java
 │       │           │
-│       │           ├── service/impl/
+│       │           ├── service/impl/        # Implementations of service interfaces
 │       │           │   ├── AdminServiceImpl.java
 │       │           │   ├── UserServiceImpl.java
 │       │           │   ├── ExamServiceImpl.java
 │       │           │   └── ReportServiceImpl.java
 │       │           │
-│       │           ├── repository/
+│       │           ├── repository/          # Spring Data JPA repositories
 │       │           │   ├── UserRepository.java
 │       │           │   ├── ExamRepository.java
 │       │           │   ├── QuestionRepository.java
 │       │           │   ├── ResponseRepository.java
 │       │           │   └── ReportRepository.java
 │       │           │
-│       │           ├── model/
+│       │           ├── model/               # Entity classes representing database tables
 │       │           │   ├── User.java
 │       │           │   ├── Exam.java
 │       │           │   ├── Question.java
 │       │           │   ├── Response.java
 │       │           │   └── Report.java
 │       │           │
-│       │           ├── config/
+│       │           ├── config/              # Configuration classes (e.g., security, web)
 │       │           │   ├── SecurityConfig.java
 │       │           │   └── WebConfig.java
 │       │           │
-│       │           ├── exception/
+│       │           ├── exception/           # Custom exception handling
 │       │           │   ├── GlobalExceptionHandler.java
 │       │           │   └── ResourceNotFoundException.java
 │       │           │
-│       │           └── ExamPortalApplication.java
+│       │           └── ExamPortalApplication.java  # Main Spring Boot application class
 │       │
 │       └── resources/
-│           ├── application.properties
-│           └── data.sql (optional seed data)
+│           ├── application.properties       # Application configuration
+│           └── data.sql                     # Optional seed data for DB initialization
 │
-└── pom.xml
- 
- 
+└── pom.xml                                  # Maven build configuration
