@@ -107,58 +107,59 @@ This document provides the Low-Level Design (LLD) for an Online Exam Portal aime
 - Results and Analytics Dashboard
  
  
+
 ## Project Structure
-/online-exam-portal-backend
-│
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── examportal/
-│       │           ├── controller/          # REST controllers for handling HTTP requests
-│       │           │   ├── AdminController.java
-│       │           │   ├── UserController.java
-│       │           │   ├── ExamController.java
-│       │           │   └── ReportController.java
-│       │           │
-│       │           ├── service/             # Service interfaces for business logic
-│       │           │   ├── AdminService.java
-│       │           │   ├── UserService.java
-│       │           │   ├── ExamService.java
-│       │           │   └── ReportService.java
-│       │           │
-│       │           ├── service/impl/        # Implementations of service interfaces
-│       │           │   ├── AdminServiceImpl.java
-│       │           │   ├── UserServiceImpl.java
-│       │           │   ├── ExamServiceImpl.java
-│       │           │   └── ReportServiceImpl.java
-│       │           │
-│       │           ├── repository/          # Spring Data JPA repositories
-│       │           │   ├── UserRepository.java
-│       │           │   ├── ExamRepository.java
-│       │           │   ├── QuestionRepository.java
-│       │           │   ├── ResponseRepository.java
-│       │           │   └── ReportRepository.java
-│       │           │
-│       │           ├── model/               # Entity classes representing database tables
-│       │           │   ├── User.java
-│       │           │   ├── Exam.java
-│       │           │   ├── Question.java
-│       │           │   ├── Response.java
-│       │           │   └── Report.java
-│       │           │
-│       │           ├── config/              # Configuration classes (e.g., security, web)
-│       │           │   ├── SecurityConfig.java
-│       │           │   └── WebConfig.java
-│       │           │
-│       │           ├── exception/           # Custom exception handling
-│       │           │   ├── GlobalExceptionHandler.java
-│       │           │   └── ResourceNotFoundException.java
-│       │           │
-│       │           └── ExamPortalApplication.java  # Main Spring Boot application class
-│       │
-│       └── resources/
-│           ├── application.properties       # Application configuration
-│           └── data.sql                     # Optional seed data for DB initialization
-│
-└── pom.xml                                  # Maven build configuration
+/online-exam-portal-backend  
+│  
+├── src/  
+│   └── main/  
+│       ├── java/  
+│       │   └── com/  
+│       │       └── examportal/  
+│       │           ├── controller/  
+│       │           │   ├── AdminController.java  
+│       │           │   ├── UserController.java  
+│       │           │   ├── ExamController.java  
+│       │           │   └── ReportController.java  
+│       │           │  
+│       │           ├── service/  
+│       │           │   ├── AdminService.java  
+│       │           │   ├── UserService.java  
+│       │           │   ├── ExamService.java  
+│       │           │   └── ReportService.java  
+│       │           │  
+│       │           ├── service/impl/  
+│       │           │   ├── AdminServiceImpl.java  
+│       │           │   ├── UserServiceImpl.java  
+│       │           │   ├── ExamServiceImpl.java  
+│       │           │   └── ReportServiceImpl.java  
+│       │           │  
+│       │           ├── repository/  
+│       │           │   ├── UserRepository.java  
+│       │           │   ├── ExamRepository.java  
+│       │           │   ├── QuestionRepository.java  
+│       │           │   ├── ResponseRepository.java  
+│       │           │   └── ReportRepository.java  
+│       │           │  
+│       │           ├── model/  
+│       │           │   ├── User.java  
+│       │           │   ├── Exam.java  
+│       │           │   ├── Question.java  
+│       │           │   ├── Response.java  
+│       │           │   └── Report.java  
+│       │           │  
+│       │           ├── config/  
+│       │           │   ├── SecurityConfig.java  
+│       │           │   └── WebConfig.java  
+│       │           │  
+│       │           ├── exception/  
+│       │           │   ├── GlobalExceptionHandler.java  
+│       │           │   └── ResourceNotFoundException.java  
+│       │           │  
+│       │           └── ExamPortalApplication.java  
+│       │  
+│       └── resources/  
+│           ├── application.properties  
+│           └── data.sql (optional seed data)  
+│  
+└── pom.xml  
